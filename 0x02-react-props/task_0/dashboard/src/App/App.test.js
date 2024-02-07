@@ -1,7 +1,11 @@
 import App from "./App";
+import React from "react";
+import { shallow } from "enzyme";
 
-test("renders learn react link", () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('App', () => {
+  it('renders App component without crashing', () => {
+    const component = shallow(<App />);
+
+    expect(component).tobeDefined();
+  });
 });
