@@ -10,7 +10,7 @@ describe('Header', () => {
 	});
 	it("should render h1", () => {
 		const component = shallow(<Header />);
-		expect(wrapper.exists("img")).toEqual(true);
-		expect(wrapper.containsMatchingElement(<h1>School dashboard</h1>)).toEqual(true);
+		expect(component.exists("img")).toEqual(true);
+		expect(component.containsMatchingElement(<h1>School dashboard</h1>)).toEqual(true);
 	});
 });

@@ -10,7 +10,7 @@ describe('App', () => {
   it('renders App component without crashing', () => {
     const component = shallow(<App />);
 
-    expect(component).tobeDefined();
+    expect(component).toBeDefined();
   });
   it("should render Notifications component", () => {
     const component = shallow(<App />);
