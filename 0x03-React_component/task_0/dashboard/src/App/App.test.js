@@ -22,6 +22,7 @@ describe('Test App.js', () => {
   });
 
   it('App component contains Login component', () => {
+    wrapper.setProps({ isLoggedIn: false });
     expect(wrapper.find("Login")).toHaveLength(1);
   });
 
@@ -30,6 +31,7 @@ describe('Test App.js', () => {
   });
 
   it('test to check that CourseList is not displayed inside App', () => {
+    wrapper.setProps({ isLoggedIn: false });
     expect(wrapper.find("CourseList")).toHaveLength(0);
   });
 });
@@ -38,7 +40,7 @@ describe("Testing <App isLoggedIn={true} />", () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<App isLoggedIn={true}/>);
+    wrapper = shallow(<App isLoggedIn={true} />);
   });
 
   it("the Login component is not included", () => {
